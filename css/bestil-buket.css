@@ -1,0 +1,265 @@
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.page_body {
+    background-image: url(../images/backgroundimage.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/* -------- Nav bar ----------*/
+
+/*--- Header ---*/
+
+.logo {
+    width:200px;
+    max-width: 100%;
+    height: auto;
+    padding-top: 3.5px;
+}
+
+/*--- Navigation ---*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #7f8d83;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/*--- Burger Menu ---*/
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*--- Burger Animation ---*/
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px):
+    }
+}
+
+.page_body textarea {
+    border: 1px solid black;
+}
+
+.bestil_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bestil_section img {
+    width: 100%;
+    height: auto;
+}
+
+.bestil_label {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.bestil_label h2 {
+    margin: 2vh 0 3vh 0;
+}
+
+.bestil_label h1 {
+    margin: 5vh 0 3vh 0;
+    text-align: center;
+}
+
+.bestil_label h4 {
+    text-align: center;
+}
+
+.kontakt li {
+    list-style: none;
+    border: 1px solid black;
+}
+
+
+
+.bestil_label ul {
+    text-align: left;
+    margin-left: 6vh;
+    list-style: none;
+}
+
+.bestil_label li {
+    margin: 2px 0;
+    max-width: 70%;
+}
+
+#levering {
+    align-items: center;
+}
+
+#afhenter {
+    align-items: center;
+}
+
+.bestil_label button {
+    margin: 20px;
+    padding: 10px 0;
+    background-color: orange;
+}
+
+.bestil_image {
+    text-align: center;
+    max-width: 50%;
+    margin: 8vh 0;
+}
+
+.bestil_image p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*---- footer ---- */
+
+.page_footer {
+    background-color: #7f8d83;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20rem;
+    clear: both;
+}
+
+.footer_address {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.footer_card {
+    align-items: center;
+}
+
+.some_icon {
+    width: 55px;
+    margin: 20px;
+    align-items: center;
+}
+
+@media only screen and (min-width:901px) {
+
+    .page_footer {
+        height: 15rem;
+    }
+
+    .bestil_section {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+
+    }
+
+    .bestil_section img {
+        max-width: 30%
+    }
+
+    .bestil_label {
+        text-align: start;
+    }
+
+    .bestil_label ul {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+/*------- Nav bar ----*/
+@media screen and (max-width:900px){
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #7f8d83;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%)
+    }
+}

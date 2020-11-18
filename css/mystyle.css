@@ -1,15 +1,29 @@
-*{
-    margin: 0px;
-    padding: 0px;
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
+
+.page_body {
+    background-image: url(../images/backgroundimage.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/* -------- Nav bar ----------*/
 
 /*--- Header ---*/
 
 .logo {
-    width: 200px;
+    width:200px;
     max-width: 100%;
     height: auto;
+    padding-top: 3.5px;
 }
 
 /*--- Navigation ---*/
@@ -31,10 +45,11 @@ nav {
 
 .nav-links li {
     list-style: none;
+
 }
 
 .nav-links a{
-    color: rgb(226, 226, 226);
+    color: #e5e5e5;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -59,28 +74,258 @@ nav {
 
 /*--- Burger Animation ---*/
 
-.toggle .line1{
+.toggle .line1 {
     transform: rotate(-45deg) translate(-5px,6px);
 }
-.toggle .line2{
+.toggle .line2 {
     opacity: 0;
 }
-.toggle .line3{
+.toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-@keyframes navLinkFade{
-    from{
+@keyframes navLinkFade {
+    from {
         opacity: 0;
         transform: translateX(50px);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateX(0px):
     }
 }
 
+/*----- welcome section ----- */
+
+.welcome_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.web_text {
+    display: none;
+}
+
+.mobile_header {
+    display: block;
+    text-align: center;
+}
+
+.web_header {
+    display: none;
+}
+
+.welcome_image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.mobile_text {
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 30px;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.order_link {
+    text-decoration: none;
+}
+
+.order_cta {
+    padding: 17.5px;
+    margin-right: 87.5px;
+    margin-left: 87.5px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #7f8d83;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/*----- sortiment section ---- */
+
+.card {
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+.card:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.order_cta {
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+.order_cta:hover {
+    filter: blur(0px);
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.sortiment_web {
+    display: none;
+}
+
+.sortiment_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: pink;
+    flex-direction: column;
+}
+
+.sortiment_image {
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+.sortiment_header {
+    text-align: center;
+    padding: 1rem;
+
+    margin-bottom: 1rem;
+    margin-right: 5.46rem;
+    margin-left: 5.46rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.2rem;
+}
+
+.web_image {
+    display: none;
+}
+
+
+/*---- footer ---- */
+
+.page_footer {
+    background-color: #7f8d83;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20rem;
+}
+
+.footer_address {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.footer_card {
+    align-items: center;
+}
+
+.some_icon {
+    width: 55px;
+    margin: 20px;
+    align-items: center;
+}
+
+/*---- media query mobile ---- */
+
+@media only screen and (max-width:899px) {
+    .sortiment_header {
+        background-color: #7f8d83;
+        color: white;
+    }
+}
+
+/*----- media query ---- */
+
+@media only screen and (min-width:900px) {
+
+    .sortiment_web {
+        display: flex;
+    }
+
+    .sortiment_mobile {
+        display: none;
+    }
+
+    .web_image {
+        display: flex;
+
+    }
+
+    .welcome_image {
+        width: 50%;
+    }
+
+    .welcome_section {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .order_cta {
+        margin: 25px;
+        font-size: 1.7rem;
+        margin-top: 50px;
+    }
+
+    .web_text {
+        display: flex;
+        text-align: center;
+        margin: 25px;
+        line-height: 40px;
+        font-size: 1.4rem;
+    }
+
+    .web_header {
+        display: block;
+        text-align: center;
+    }
+
+    .mobile_text {
+        display: none;
+    }
+
+    .mobile_header {
+        display: none;
+    }
+
+    .sortiment_section{
+        flex-direction: row;
+    }
+
+    .sortiment_header {
+        font-weight: bold;
+    }
+
+    .some_icon {
+        width: 75px;
+    }
+
+    .page_footer {
+        height: 15rem;
+    }
+}
+
+/*------- Nav bar ----*/
 @media screen and (max-width:900px){
+
     body {
         overflow-x: hidden;
     }
@@ -111,4 +356,3 @@ nav {
         transform: translateX(0%)
     }
 }
-

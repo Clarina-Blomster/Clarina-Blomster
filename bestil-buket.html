@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bestil-buket.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Forside | Clarina Blomster</title>
+</head>
+
+<body class="page_body">
+
+    <nav>
+        <div class="logo">
+            <h4>
+                <a href="index.html">
+                    <img src="images/logo12.svg" alt="Logo">
+                </a>
+            </h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="sortiment.html">Sortiment</a></li>
+            <li><a href="#">Bestilling</a></li>
+            <li><a href="#">Om os</a></li>
+            <li><a href="#">Kontakt os</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="bestil_section">
+        <div class="bestil_image">
+            <img src="images/Stor%20Buket%20Icon.png" alt="Stor buket">
+            <p>Dette er en buket til 450 kr.</p>
+        </div>
+
+        <div class="bestil_label">
+            <h1>
+                Bestil vare
+            </h1>
+
+            <h4>
+                Obs. for levering samme dag, skal ordren bestilles senest klokken 11:00.
+            </h4>
+
+            <h2>Beskrivelse:</h2>
+            <form>
+                <textarea name="beskrivelse" placeholder="I dette felt, skal du beskrive din ordre, du gerne vil bestille (Fx. 'Jeg vil gerne bestille en efterårsbuket i mellem størrelse til omkring 200 kr. og den må gerne være tætbundet') " rows="5" cols="50"></textarea>
+            </form>
+
+            <h2>Indtast kontaktoplysninger:</h2>
+
+            <form>
+                <ul class="kontakt">
+                    <li>
+                        <label for="firstlast">Navn:</label>
+                            <input type="text" name="fullname" id="firstlast">
+                    </li>
+                    <li>
+                        <label for="adress">Adresse:</label>
+                            <input type="text" name="adress" id="adress">
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                            <input type="text" name="email" id="email">
+                    </li>
+                    <li>
+                        <label for="tel">Nummer</label>
+                            <input type="tel" name="mobilnummer" id="tel">
+                    </li>
+                </ul>
+            </form>
+
+            <h2>Levering</h2>
+            <ul>
+                <li>
+                    Afhenter selv
+                    <input type="radio" name="levering" id="afhenter" value="afhenter selv" checked>
+                </li>
+                <li>
+                    Ønsker levering
+                    <input type="radio" name="levering" id="levering" value="ønsker_levering">
+                </li>
+            </ul>
+
+            <button>
+                Send forspørgsel
+            </button>
+        </div>
+    </div>
+
+        <footer class="page_footer">
+            <div class="footer_address">
+                <address>Skt. Pauls Kirkeplads 16<br>8000 Aarhus C<br>86 12 70 90<br>info@clarina.dk<br></address>
+            </div>
+            <div class="footer_card">
+                <a href="https://www.facebook.com/Clarina-Blomster-1637557023126690">
+                    <img src="images/facebooklogo.png" alt="facebook icon" class="some_icon">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagramlogo.png" alt="instagram icon" class="some_icon">
+                </a>
+            </div>
+        </footer>
+
+<script src="app.js"></script>
+
+</body></html>
