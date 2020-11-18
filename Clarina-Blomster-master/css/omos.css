@@ -1,0 +1,299 @@
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.page_body {
+    background-image: url(../images/backgroundimage.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+
+
+/* -------- Nav bar ----------*/
+
+/*--- Header ---*/
+
+.logo {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    padding-top: 3.5px;
+}
+
+/*--- Navigation ---*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #7f8d83;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav-links {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/*--- Burger Menu ---*/
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*--- Burger Animation ---*/
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px):
+    }
+}
+
+/*------ om os section ---- */
+
+.grid-container,
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth {
+    display: none;
+}
+
+.section_header1 {
+    display: none;
+}
+
+.omos_section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.omos_image {
+    max-width: 95%;
+    justify-items: center;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.section_header {
+    margin: 15px;
+    text-align: center;
+    color: #333333;
+
+}
+
+/*---- footer ---- */
+
+.page_footer {
+    background-color: #7f8d83;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20rem;
+    clear: both;
+
+}
+
+.footer_address {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.footer_card {
+    align-items: center;
+}
+
+.some_icon {
+    width: 55px;
+    margin: 20px;
+    align-items: center;
+}
+
+
+
+/*----- media query ---- */
+
+@media only screen and (min-width:900px) {
+    .page_footer {
+        height: 15rem;
+    }
+
+    .omos_section {
+        display: none;
+    }
+
+    .omos_image {
+        height: 350px;
+        margin: 30px;
+
+        transition: 1.5s;
+        overflow: hidden;
+    }
+
+    .omos_image:hover {
+        filter: blur(0px);
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+.section_header1 {
+
+    margin: 30px;
+    text-align: center;
+}
+
+
+.grid-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "first second"
+        "third fourth"
+        "fifth sixth";
+}
+
+.first {
+    display: grid;
+    grid-area: first;
+    justify-self: end;
+    margin-right: 25px;
+}
+
+.second {
+    display: grid;
+    grid-area: second;
+    justify-self: start;
+    margin-top: 200px;
+    margin-left: 25px;
+}
+
+.third {
+    display: grid;
+    grid-area: third;
+    justify-self: end;
+    margin-right: 25px;
+}
+
+.fourth {
+    display: grid;
+    grid-area: fourth;
+    justify-self: start;
+    margin-top: 200px;
+    margin-left: 25px;
+}
+
+.fifth {
+    display: grid;
+    grid-area: fifth;
+    justify-self: end;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.sixth {
+    display: grid;
+
+    grid-area: sixth;
+    justify-self: start;
+    margin-top: 200px;
+}
+
+
+}
+
+/*------- Nav bar ----*/
+@media screen and (max-width:900px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #7f8d83;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        transform: translateX(0%)
+    }
+}
