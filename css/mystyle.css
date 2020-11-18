@@ -182,7 +182,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: pink;
+    background-color: #f1f9ff;
     flex-direction: column;
 }
 
@@ -211,7 +211,46 @@ nav {
     display: none;
 }
 
+/*----- om os section ---- */
+.omos_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 
+
+}
+
+.omos_image {
+height: 265px;
+max-width: 100%;
+align-content: center;
+margin-top: 30px;
+margin-bottom: 15px;
+}
+
+.omos_header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #7f8d83;
+    margin-bottom: 1rem;
+    margin-right: 5.46rem;
+    margin-left: 5.46rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+}
+
+.omos_image_web {
+    display: none;
+}
+
+.omos_text {
+    display: none;
+}
 /*---- footer ---- */
 
 .page_footer {
@@ -320,6 +359,43 @@ nav {
 
     .page_footer {
         height: 15rem;
+    }
+    .omos_section {
+        flex-direction: row;
+    }
+    .omos_header {
+        display: none;
+    }
+    .omos_image {
+        height: 350px;
+         transition: 1.5s;
+    overflow: hidden;
+    }
+
+.omos_image:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+    .omos_image_web {
+        display: flex;
+    }
+
+    .omos_text {
+        display: flex;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 30px;
+        background-color:#e5f0ff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        margin-right: 50px;
+        margin-left: 50px;
+        color: #333333;
+    }
+    .omos_text:hover {
+        cursor: pointer;
     }
 }
 
