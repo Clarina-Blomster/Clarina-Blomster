@@ -8,15 +8,12 @@
 }
 
 .page_body {
+
     background-size: cover;
     background-position: center;
     height: 100vh;
     font-family: sans-serif;
 }
-
-
-
-/* -------- Nav bar ----------*/
 
 /*--- Header ---*/
 
@@ -26,8 +23,6 @@
     height: auto;
     padding-top: 3.5px;
 }
-
-/*--- Navigation ---*/
 
 nav {
     display: flex;
@@ -46,18 +41,16 @@ nav {
 
 .nav-links li {
     list-style: none;
+
 }
 
-.nav-links a {
+.nav-links a{
     color: #e5e5e5;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
 }
-
-
-/*--- Burger Menu ---*/
 
 .burger {
     display: none;
@@ -71,8 +64,6 @@ nav {
     margin: 5px;
     transition: all 0.3s ease;
 }
-
-/*--- Burger Animation ---*/
 
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
@@ -95,18 +86,7 @@ nav {
     }
 }
 
-.bestil_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.bestil_image {
-    width: 50%;
-}
-
-
+/*--- Form Styling ---*/
 
 #msform {
     width: 800px;
@@ -241,7 +221,7 @@ nav {
 }
 
 
-/*---- footer ---- */
+/*--- Footer ---*/
 
 .page_footer {
     background-color: #7f8d83;
@@ -250,7 +230,6 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     height: 20rem;
-    clear: both;
 }
 
 .footer_address {
@@ -271,16 +250,8 @@ nav {
     align-items: center;
 }
 
-@media only screen and (min-width:901px) {
-
-    .page_footer {
-        height: 15rem;
-    }
-
-/*------- Nav bar ----*/
 @media screen and (max-width:900px){
-
-    body {
+     body {
         overflow-x: hidden;
     }
 
